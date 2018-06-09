@@ -389,63 +389,15 @@
 
       
         
-          
-            <h1 id="修改hexo主题（以NexT为例）"><a href="#修改hexo主题（以NexT为例）" class="headerlink" title="修改hexo主题（以NexT为例）"></a>修改hexo主题（以NexT为例）</h1><h2 id="第一步：获取开源的hexo主题"><a href="#第一步：获取开源的hexo主题" class="headerlink" title="第一步：获取开源的hexo主题"></a>第一步：获取开源的hexo主题</h2><p>在我们搭建完hexo后，第一次访问的站点都会有一个默认的主题，即：landscape主题，界面如图所示：</p>
-<p><img src="C:\Users\11047\Desktop\新建文件夹\TIM截图20180609115418.png" alt="TIM截图20180609115418"></p>
-<p>我们需要修改这个主题，那么我们可以去找一些符合我们个人爱好的一些主题<a href="https://hexo.io/themes/" target="_blank" rel="noopener">选择一个自己喜欢的 Hexo 主题</a><br> 这个网站有很多主题可以供我们去选择，如下图所示。每一个主题都有对应网站可以预览，并且都有 Github 地址，我们可以照着 Github 的 wiki 就可以安装了，过程都比较简单。</p>
-<p><img src="C:\Users\11047\Desktop\新建文件夹\TIM截图20180609120346.png" alt="TIM截图20180609120346"></p>
-<blockquote>
-<p>我们这次安装主题也是上面这些主题中其中一个，它就是 NexT 。</p>
-</blockquote>
-<h2 id="第二步：安装NexT主题"><a href="#第二步：安装NexT主题" class="headerlink" title="第二步：安装NexT主题"></a>第二步：安装NexT主题</h2><h3 id="NexT-入门"><a href="#NexT-入门" class="headerlink" title="NexT 入门"></a>NexT 入门</h3><ul>
-<li>官方文档 <a href="https://link.jianshu.com/?t=http%3A%2F%2Ftheme-next.iissnan.com%2Fgetting-started.html" target="_blank" rel="noopener">NexT 入门</a></li>
-<li><p>下载 NexT 主题</p>
-<p> 将主题clone到 项目的themes 目录下：</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd &lt;博客存放的目录&gt;</span><br><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-<p>clone完github上的NexT主题之后，在项目的themes目录中就会多出一个next文件夹：</p>
-<p><img src="C:\Users\11047\Desktop\新建文件夹\TIM截图20180609124007.png" alt="TIM截图20180609124007"></p>
-<ul>
-<li><p>使用 NexT 主题</p>
-<p>打开_config.yml 文件，将其中的theme:的值改为next</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&apos;theme: next&apos;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>  将修改后的内容重新部署到服务器上</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<h2 id="第三步：设置菜单"><a href="#第三步：设置菜单" class="headerlink" title="第三步：设置菜单"></a>第三步：设置菜单</h2><p>我们刚开始默认的菜单只有首页和归档两个，不能够满足我们的要求，所以需要添加菜单，打开<strong>主题配置文件</strong>找到<code>Scheme Settings</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">menu: home: / || home                       //首页 </span><br><span class="line">archives: /archives/ || archive             //归档 </span><br><span class="line">categories: /categories/ || th              //分类 </span><br><span class="line">tags: /tags/ || tags                        //标签 </span><br><span class="line">about: /about/ || user                      //关于 </span><br><span class="line">#schedule: /schedule/ || calendar           //日程表 </span><br><span class="line">#sitemap: /sitemap.xml || sitemap           //站点地图 </span><br><span class="line">#commonweal: /404/ || heartbeat             //公益404</span><br></pre></td></tr></table></figure>
-<p>看看你需要哪个菜单就把哪个取消注释打开就行了；<br> 关于后面的格式，以<code>archives: /archives/ || archive</code>为例：<br><code>||</code> 之前的<code>/archives/</code>表示标题“归档”，关于标题的格式可以去<code>themes/next/languages/zh-Hans.yml</code>中参考或修改<br><code>||</code>之后的<code>archive</code>表示图标，可以去<a href="https://link.jianshu.com/?t=http%3A%2F%2Ffontawesome.io%2Ficons%2F" target="_blank" rel="noopener">Font Awesome</a>中查看或修改，Next主题所有的图标都来自Font Awesome</p>
-<h2 id="第四步：主题样式设置"><a href="#第四步：主题样式设置" class="headerlink" title="第四步：主题样式设置"></a>第四步：主题样式设置</h2><p>Next主题有4种风格供我们选择，默认使用Muse，打开 <strong>主题配置文件</strong> 找到<code>Scheme Settings</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line"># scheme: Muse</span><br><span class="line"># scheme: Mist</span><br><span class="line"># scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
-<h2 id="第五步：侧栏设置"><a href="#第五步：侧栏设置" class="headerlink" title="第五步：侧栏设置"></a>第五步：侧栏设置</h2><p><em>侧栏设置包括：侧栏位置、侧栏显示与否、文章间距、返回顶部按钮等等</em></p>
-<p>打开 <strong>主题配置文件</strong> 找到<code>sidebar</code>字段</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sidebar: # Sidebar Position - 侧栏位置（只对Pisces | Gemini两种风格有效） </span><br><span class="line">position: left //靠左放置 </span><br><span class="line">#position: right //靠右放置 </span><br><span class="line"># Sidebar Display - 侧栏显示时机（只对Muse | Mist两种风格有效） </span><br><span class="line">#display: post //默认行为，在文章页面（拥有目录列表）时显示 </span><br><span class="line">display: always //在所有页面中都显示 </span><br><span class="line">#display: hide //在所有页面中都隐藏（可以手动展开） </span><br><span class="line">#display: remove //完全移除 </span><br><span class="line">offset: 12 //文章间距（只对Pisces | Gemini两种风格有效） </span><br><span class="line">b2t: false //返回顶部按钮（只对Pisces | Gemini两种风格有效） </span><br><span class="line">scrollpercent: true //返回顶部按钮的百分比</span><br></pre></td></tr></table></figure>
-<h2 id="第六步：头像设置"><a href="#第六步：头像设置" class="headerlink" title="第六步：头像设置"></a>第六步：头像设置</h2><p>打开 <strong>主题配置文件</strong> 找到<code>Sidebar Avatar</code>字段</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line">avatar: /images/header.jpg</span><br></pre></td></tr></table></figure>
-<p>这是头像的路径，只需把你的头像命名为<code>header.jpg</code>（随便命名）放入<code>themes/next/source/images</code>中，将<code>avatar</code>的路径名改成你的头像名就OK啦！</p>
-<h2 id="第七步：设置RSS"><a href="#第七步：设置RSS" class="headerlink" title="第七步：设置RSS"></a>第七步：设置RSS</h2><p>先安装 <a href="https://link.jianshu.com/?t=https%3A%2F%2Fgithub.com%2Fhexojs%2Fhexo-generator-feed" target="_blank" rel="noopener">hexo-generator-feed</a> 插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
-<p>打开 <strong>站点配置文件</strong> 找到<code>Extensions</code>在下面添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># RSS订阅</span><br><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: &apos; &apos;</span><br></pre></td></tr></table></figure>
-<p>打开 <strong>主题配置文件</strong> 找到<code>rss</code>，设置为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rss: /atom.xml</span><br></pre></td></tr></table></figure>
-<h2 id="第八步：添加分类模块"><a href="#第八步：添加分类模块" class="headerlink" title="第八步：添加分类模块"></a>第八步：添加分类模块</h2><p>新建一个分类页面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure>
-<p>把文章归入分类只需在文章的顶部标题下方添加<code>categories</code>字段，即可自动创建分类名并加入对应的分类中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 分类测试文章标题</span><br><span class="line">categories: 分类名</span><br></pre></td></tr></table></figure>
-<h2 id="第九步：添加标签模块"><a href="#第九步：添加标签模块" class="headerlink" title="第九步：添加标签模块"></a>第九步：添加标签模块</h2><p>新建一个标签页面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
-<p>打开<code>index.md</code>文件将title设置为<code>title: 标签</code></p>
-<p>把文章添加标签只需在文章的顶部标题下方添加<code>tags</code>字段，即可自动创建标签名并归入对应的标签中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: 标签测试文章标题</span><br><span class="line">tags: </span><br><span class="line">  - 标签1</span><br><span class="line">  - 标签2</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
-<h2 id="第十步：添加关于模块"><a href="#第十步：添加关于模块" class="headerlink" title="第十步：添加关于模块"></a>第十步：添加关于模块</h2><p>新建一个关于页面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page about</span><br></pre></td></tr></table></figure>
-<p>在<code>source</code>文件夹下有了<code>about/index.md</code>，打开<code>index.md</code>文件即可编辑关于你的信息，可以随便编辑。</p>
-<p>打开 <strong>主题配置文件</strong> 找到<code>menu</code>，将about取消注释</p>
-
-          
+          <h1 id="修改hexo主题（以NexT为例）"><a href="#修改hexo主题（以NexT为例）" class="headerlink" title="修改hexo主题（以NexT为例）"></a>修改hexo主题（以NexT为例）</h1><h2 id="第一步：获取开源的hexo主题"><a href="#第一步：获取开源的hexo主题" class="headerlink" title="第一步：获取开源的hexo主题"></a>第一步：获取开源的hexo主题</h2><p>在我们搭建完hexo后，第一次访问的站点都会有一个默认的主题，即：landscape主题，界面如图所示：</p>
+<p><img src="C:\Users\11047\Desktop\新建文件夹\TIM截图20180609115418.png" alt="TIM截图20180609115418"><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/09/修改hexo主题/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
