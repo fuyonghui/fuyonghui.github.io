@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[修改hexo主题]]></title>
+    <url>%2F2018%2F06%2F09%2F%E4%BF%AE%E6%94%B9hexo%E4%B8%BB%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[修改hexo主题（以NexT为例）第一步：获取开源的hexo主题在我们搭建完hexo后，第一次访问的站点都会有一个默认的主题，即：landscape主题，界面如图所示： 我们需要修改这个主题，那么我们可以去找一些符合我们个人爱好的一些主题选择一个自己喜欢的 Hexo 主题 这个网站有很多主题可以供我们去选择，如下图所示。每一个主题都有对应网站可以预览，并且都有 Github 地址，我们可以照着 Github 的 wiki 就可以安装了，过程都比较简单。 我们这次安装主题也是上面这些主题中其中一个，它就是 NexT 。 第二步：安装NexT主题NexT 入门 官方文档 NexT 入门 下载 NexT 主题 将主题clone到 项目的themes 目录下： 12$ cd &lt;博客存放的目录&gt;$ git clone https://github.com/iissnan/hexo-theme-next themes/next clone完github上的NexT主题之后，在项目的themes目录中就会多出一个next文件夹： 使用 NexT 主题 打开_config.yml 文件，将其中的theme:的值改为next 1&apos;theme: next&apos; 将修改后的内容重新部署到服务器上 12hexo g -dhexo s 第三步：设置菜单我们刚开始默认的菜单只有首页和归档两个，不能够满足我们的要求，所以需要添加菜单，打开主题配置文件找到Scheme Settings 12345678menu: home: / || home //首页 archives: /archives/ || archive //归档 categories: /categories/ || th //分类 tags: /tags/ || tags //标签 about: /about/ || user //关于 #schedule: /schedule/ || calendar //日程表 #sitemap: /sitemap.xml || sitemap //站点地图 #commonweal: /404/ || heartbeat //公益404 看看你需要哪个菜单就把哪个取消注释打开就行了； 关于后面的格式，以archives: /archives/ || archive为例：|| 之前的/archives/表示标题“归档”，关于标题的格式可以去themes/next/languages/zh-Hans.yml中参考或修改||之后的archive表示图标，可以去Font Awesome中查看或修改，Next主题所有的图标都来自Font Awesome 第四步：主题样式设置Next主题有4种风格供我们选择，默认使用Muse，打开 主题配置文件 找到Scheme Settings 12345# Schemes# scheme: Muse# scheme: Mist# scheme: Piscesscheme: Gemini 第五步：侧栏设置侧栏设置包括：侧栏位置、侧栏显示与否、文章间距、返回顶部按钮等等 打开 主题配置文件 找到sidebar字段 1234567891011sidebar: # Sidebar Position - 侧栏位置（只对Pisces | Gemini两种风格有效） position: left //靠左放置 #position: right //靠右放置 # Sidebar Display - 侧栏显示时机（只对Muse | Mist两种风格有效） #display: post //默认行为，在文章页面（拥有目录列表）时显示 display: always //在所有页面中都显示 #display: hide //在所有页面中都隐藏（可以手动展开） #display: remove //完全移除 offset: 12 //文章间距（只对Pisces | Gemini两种风格有效） b2t: false //返回顶部按钮（只对Pisces | Gemini两种风格有效） scrollpercent: true //返回顶部按钮的百分比 第六步：头像设置打开 主题配置文件 找到Sidebar Avatar字段 12# Sidebar Avataravatar: /images/header.jpg 这是头像的路径，只需把你的头像命名为header.jpg（随便命名）放入themes/next/source/images中，将avatar的路径名改成你的头像名就OK啦！ 第七步：设置RSS先安装 hexo-generator-feed 插件 1$ npm install hexo-generator-feed --save 打开 站点配置文件 找到Extensions在下面添加 123456789# RSS订阅feed: type: atom path: atom.xml limit: 20 hub: content: content_limit: 140 content_limit_delim: &apos; &apos; 打开 主题配置文件 找到rss，设置为 1rss: /atom.xml 第八步：添加分类模块新建一个分类页面 1$ hexo new page categories 把文章归入分类只需在文章的顶部标题下方添加categories字段，即可自动创建分类名并加入对应的分类中 12title: 分类测试文章标题categories: 分类名 第九步：添加标签模块新建一个标签页面 1$ hexo new page tags 打开index.md文件将title设置为title: 标签 把文章添加标签只需在文章的顶部标题下方添加tags字段，即可自动创建标签名并归入对应的标签中 12345title: 标签测试文章标题tags: - 标签1 - 标签2 ... 第十步：添加关于模块新建一个关于页面 1$ hexo new page about 在source文件夹下有了about/index.md，打开index.md文件即可编辑关于你的信息，可以随便编辑。 打开 主题配置文件 找到menu，将about取消注释]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>NexT</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[hello hexo!]]></title>
     <url>%2F2018%2F06%2F02%2Fhello-hexo%2F</url>
     <content type="text"><![CDATA[THIS IS MY FIRST POST！你好！记录一下第一次创建博客的时间。 未来的日子里，我将将我工作中的一些技术积累，生活的心得体会记录到我的博客中。 sometimes code， sometimes design]]></content>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-02T09:43:58.440Z</updated>
+  <updated>2018-06-09T10:37:05.007Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>修改hexo主题</title>
+    <link href="http://yoursite.com/2018/06/09/%E4%BF%AE%E6%94%B9hexo%E4%B8%BB%E9%A2%98/"/>
+    <id>http://yoursite.com/2018/06/09/修改hexo主题/</id>
+    <published>2018-06-09T10:27:47.000Z</published>
+    <updated>2018-06-09T10:37:05.007Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;修改hexo主题（以NexT为例）&quot;&gt;&lt;a href=&quot;#修改hexo主题（以NexT为例）&quot; class=&quot;headerlink&quot; title=&quot;修改hexo主题（以NexT为例）&quot;&gt;&lt;/a&gt;修改hexo主题（以NexT为例）&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="NexT" scheme="http://yoursite.com/tags/NexT/"/>
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>hello hexo!</title>
